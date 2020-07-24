@@ -1,6 +1,8 @@
 /* eslint-disable quotes */
 "use strict";
 
+const _Node = require("../node/_Node");
+
 class Queue {
   constructor() {
     this.first = null;
