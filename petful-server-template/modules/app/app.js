@@ -1,11 +1,14 @@
-const express = require('express')
-const cors = require('cors')
+/* eslint-disable quotes */
+"use strict";
 
-const app = express()
+const express = require("express");
+const cors = require("cors");
 
-app.use(cors())
+const app = express();
 
-app.use('/people', require('../people/people.router'))
-app.use('/pets', require('../pets/pets.router'))
+app.use(cors());
 
-module.exports = app
+app.use("/people", require("../people/people.router"));
+app.use("/pets", require("../pets/pets.router"));
+
+module.exports = app;

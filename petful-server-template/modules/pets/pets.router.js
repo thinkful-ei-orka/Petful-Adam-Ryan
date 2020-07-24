@@ -1,17 +1,20 @@
-const express = require('express')
-const json = require('body-parser').json()
+/* eslint-disable quotes */
+"use strict";
 
-const Pets = require('./pets.service')
-const People = require('../people/people.service')
+const express = require("express");
+const json = require("body-parser").json();
 
-const router = express.Router()
+const Pets = require("./pets.service");
+const People = require("../people/people.service");
 
-router.get('/', (req, res) => {
+const router = express.Router();
+
+router.get("/", (req, res) => {
   // Return all pets currently up for adoption.
-})
+});
 
-router.delete('/', json, (req, res) => {
+router.delete("/", json, (req, res) => {
   // Remove a pet from adoption.
-})
+});
 
-module.exports = router
+module.exports = router;
