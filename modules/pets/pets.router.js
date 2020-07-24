@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 });
 
 router.delete("/", json, (req, res) => {
-  res.status(200).json(petsService.dequeue(req.body.type));
+  res.status(202).json(petsService.dequeue(req.body.type));
 });
 
 module.exports = router;

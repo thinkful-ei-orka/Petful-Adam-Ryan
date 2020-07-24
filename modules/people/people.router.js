@@ -11,7 +11,7 @@ const peopleService = require("./people.service");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.status(200).json(people.display);
+  res.status(200).json(peopleService.get());
 });
 
 router.post("/", json, (req, res) => {

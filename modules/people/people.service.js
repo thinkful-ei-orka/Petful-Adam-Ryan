@@ -19,6 +19,7 @@ module.exports = {
 
   enqueue(person) {
     people.enqueue(person);
+    return `You've been added to the list!`;
   },
 
   dequeue() {
