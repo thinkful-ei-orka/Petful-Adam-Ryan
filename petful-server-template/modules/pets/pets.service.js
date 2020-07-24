@@ -23,6 +23,8 @@ module.exports = {
   },
 
   dequeue(type) {
+    let petPeek = pets[type].peek();
     pets[type].dequeue();
+    return petPeek;
   },
 };
