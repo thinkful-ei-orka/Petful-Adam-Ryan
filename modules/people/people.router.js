@@ -15,7 +15,11 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", json, (req, res) => {
-  res.status(201).json(peopleService.enqueue(req.body.person));
+  res.status(201).json(peopleService.enqueue(req.body.name));
+});
+
+router.delete("/", (req, res) => {
+  res.status(202).json(peopleService.dequeue());
 });
 
 module.exports = router;
