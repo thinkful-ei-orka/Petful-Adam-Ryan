@@ -35,6 +35,7 @@ class Queue {
     return this.first.value;
   }
   display() {
+    if (this.first === null) { return null; }
     let currNode = this.first;
     let resultArray = [];
     while (currNode.next !== null) {

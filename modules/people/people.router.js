@@ -19,7 +19,8 @@ router.post("/", json, (req, res) => {
 });
 
 router.delete("/", (req, res) => {
-  res.status(202).json(peopleService.dequeue());
+  peopleService.dequeue();
+  res.status(202).json('User removed');
 });
 
 module.exports = router;
