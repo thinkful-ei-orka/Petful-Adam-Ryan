@@ -15,7 +15,6 @@ router.get("/", (req, res) => {
 });
 
 router.delete("/", json, (req, res) => {
-  console.log(req.body)
   res.status(202).json(petsService.dequeue(req.body.type));
 });
 
